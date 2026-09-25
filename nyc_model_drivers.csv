@@ -1,0 +1,10 @@
+model,driver,importance_pct
+What sets price,Location (lat+long),32
+What sets price,Room type,26
+What sets price,Occupancy,11
+What sets price,Reviews / month,9
+What sets price,Availability,8
+What gets you booked,Availability,60
+What gets you booked,Location,14
+What gets you booked,Reviews,9
+What gets you booked,Price,2
