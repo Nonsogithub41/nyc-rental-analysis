@@ -5,6 +5,7 @@ owners. I analysed **17,614 listings** in Python to answer both, and the two own
 have *different* answers.
 
 **▶ Live interactive dashboard:** https://nonsogithub41.github.io/nyc-rental-analysis/
+**▶ Tableau story:** https://public.tableau.com/app/profile/nonso.ezeoma/viz/NYCRentalStory/NewYorkCityRentalMarketRentersOwners
 
 ---
 
