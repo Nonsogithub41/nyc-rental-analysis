@@ -27,6 +27,16 @@ how a listing wins bookings.
 | **Price ↔ bookings** | Correlation **−0.03** | Discounting to drive occupancy is the wrong lever |
 | **The opportunity** | A **~31% "dormant"** segment sits always-available, barely booked | A visibility & reviews problem, not a pricing one |
 
+## Machine learning
+
+- **Supervised — regression:** two **Random Forest** models (scikit-learn) — one predicting **price**
+  (test R² ≈ 0.42), one predicting **occupancy** (R² ≈ 0.59) — with each factor's influence read from
+  **feature importances**. Modelling price and occupancy separately is what surfaced the headline: the
+  two run on different drivers.
+- **Unsupervised — clustering:** **K-means** on **standardised** behavioural features, with the optimal
+  number of clusters (*k* = 4) chosen by the **elbow method**. Identifier columns are removed so cluster
+  distance reflects behaviour, not an ID's scale — the four segments are the result.
+
 ## Research questions
 
 1. **What sets a listing's price?** (renters & owners — the pricing question)
@@ -50,11 +60,8 @@ how a listing wins bookings.
 
 ## Method
 
-- **Tools:** Python (pandas, scikit-learn), Tableau
-- **Two separate models**, because they answer different questions: a random forest for **price**
-  (test R² ≈ 0.42) and one for **occupancy** (R² ≈ 0.59); driver weights are feature importances.
-- **Segments** are K-means on **standardised** behavioural features with **identifier columns removed**,
-  so distance reflects behaviour rather than an arbitrary ID scale.
+- **Tools:** Python (pandas, scikit-learn), Tableau. Full model details are in the **Machine learning**
+  section above; the notebook has every step with outputs.
 - Run it yourself: `pip install pandas scikit-learn` then open the notebook — every figure regenerates
   from the CSV.
 
